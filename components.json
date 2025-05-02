@@ -1,0 +1,30 @@
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "default",
+  "rsc": true,
+  "tsx": true,
+  "tailwind": {
+    "config": "tailwind.config.ts",
+    "css": "app/globals.css",
+    "baseColor": "slate",
+    "cssVariables": true
+  },
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/lib/utils"
+  },
+  "components": {
+    "badge": {
+      "name": "Badge",
+      "description": "A small badge component for displaying tags and labels.",
+      "dependencies": ["@radix-ui/react-slot"],
+      "files": ["components/ui/badge.tsx"]
+    },
+    "card": {
+      "name": "Card",
+      "description": "A card component for displaying blog posts.",
+      "dependencies": [],
+      "files": ["components/ui/card.tsx"]
+    }
+  }
+}

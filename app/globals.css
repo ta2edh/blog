@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 120 100% 2%;
+    --foreground: 120 100% 70%;
+    --card: 120 100% 4%;
+    --card-foreground: 120 100% 80%;
+    --popover: 120 100% 3%;
+    --popover-foreground: 120 100% 80%;
+    --primary: 120 100% 50%;
+    --primary-foreground: 120 100% 2%;
+    --secondary: 120 30% 15%;
+    --secondary-foreground: 120 100% 80%;
+    --muted: 120 30% 10%;
+    --muted-foreground: 120 50% 60%;
+    --accent: 120 30% 15%;
+    --accent-foreground: 120 100% 80%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 120 100% 98%;
+    --border: 120 30% 20%;
+    --input: 120 30% 20%;
+    --ring: 120 100% 50%;
+    --radius: 0.25rem;
+  }
+
+  .dark {
+    --background: 120 100% 2%;
+    --foreground: 120 100% 70%;
+    --card: 120 100% 4%;
+    --card-foreground: 120 100% 80%;
+    --popover: 120 100% 3%;
+    --popover-foreground: 120 100% 80%;
+    --primary: 120 100% 50%;
+    --primary-foreground: 120 100% 2%;
+    --secondary: 120 30% 15%;
+    --secondary-foreground: 120 100% 80%;
+    --muted: 120 30% 10%;
+    --muted-foreground: 120 50% 60%;
+    --accent: 120 30% 15%;
+    --accent-foreground: 120 100% 80%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 120 100% 98%;
+    --border: 120 30% 20%;
+    --input: 120 30% 20%;
+    --ring: 120 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Courier New", Courier, monospace;
+  }
+
+  /* Terminal-like styling */
+  .terminal-header {
+    @apply font-mono text-hamgreen-500 font-bold;
+  }
+
+  .terminal-text {
+    @apply font-mono;
+  }
+
+  .terminal-card {
+    @apply border-hamgreen-700 bg-black;
+  }
+
+  .terminal-blink {
+    animation: blink 1s step-end infinite;
+  }
+
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-black;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-hamgreen-700 rounded;
+  }
+
+  /* Typography overrides for the terminal theme */
+  .prose {
+    @apply text-hamgreen-400;
+  }
+
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4 {
+    @apply text-hamgreen-500;
+  }
+
+  .prose a {
+    @apply text-hamgreen-400 underline decoration-hamgreen-700 hover:text-hamgreen-300;
+  }
+
+  .prose code {
+    @apply bg-black text-hamgreen-500 border border-hamgreen-900 px-1;
+  }
+
+  .prose pre {
+    @apply bg-black border border-hamgreen-900;
+  }
+
+  .prose blockquote {
+    @apply border-l-4 border-hamgreen-700 text-hamgreen-300;
+  }
+}
