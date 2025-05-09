@@ -21,12 +21,12 @@ type PostCardProps = {
 
 export function PostCard({ post }: PostCardProps) {
   return (
-    <Card className="h-full flex flex-col border border-hamgreen-700 bg-black shadow-[0_0_10px_rgba(0,255,0,0.1)]">
-      <CardHeader className="border-b border-hamgreen-900">
+    <Card className="h-full flex flex-col border border-green-700 bg-black shadow-[0_0_10px_rgba(0,255,0,0.1)]">
+      <CardHeader className="border-b border-green-900">
         <div className="flex items-center gap-2">
-          <FontAwesomeIcon icon={faRadio} className="h-4 w-4 text-hamgreen-500" />
+          <FontAwesomeIcon icon={faRadio} className="h-4 w-4 text-green-500" />
           <CardTitle className="line-clamp-2 terminal-header">
-            <Link href={`/posts/${post.slug}`} className="hover:text-hamgreen-300">
+            <Link href={`/posts/${post.slug}`} className="hover:text-green-300">
               {post.title}
             </Link>
           </CardTitle>
@@ -34,11 +34,11 @@ export function PostCard({ post }: PostCardProps) {
       </CardHeader>
       <CardContent className="flex-grow pt-4">
         <p className="text-muted-foreground text-sm mb-4 terminal-text">
-          <span className="text-hamgreen-600">TX:</span> {formatDate(post.date)}
+          <span className="text-green-600">TX:</span> {formatDate(post.date)}
           {post.author && (
             <>
               {" • "}
-              <span className="text-hamgreen-400">
+              <span className="text-green-400">
                 {post.author.name}
                 {post.author.callsign && ` (${post.author.callsign})`}
               </span>
@@ -47,11 +47,11 @@ export function PostCard({ post }: PostCardProps) {
         </p>
         <p className="line-clamp-3 text-muted-foreground terminal-text">{post.excerpt}</p>
       </CardContent>
-      <CardFooter className="border-t border-hamgreen-900">
+      <CardFooter className="border-t border-green-900">
         {post.tags && post.tags.length > 0 && (
           <div className="flex flex-wrap gap-2">
             {post.tags.slice(0, 3).map((tag) => (
-              <Badge key={tag} variant="secondary" className="bg-black border border-hamgreen-700 text-hamgreen-500">
+              <Badge key={tag} variant="secondary" className="bg-black border border-green-700 text-green-500">
                 {tag}
               </Badge>
             ))}

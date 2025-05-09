@@ -60,7 +60,7 @@
 
   /* Terminal-like styling */
   .terminal-header {
-    @apply font-mono text-hamgreen-500 font-bold;
+    @apply font-mono text-green-500 font-bold;
   }
 
   .terminal-text {
@@ -68,7 +68,7 @@
   }
 
   .terminal-card {
-    @apply border-hamgreen-700 bg-black;
+    @apply border-green-700 bg-black;
   }
 
   .terminal-blink {
@@ -95,34 +95,34 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-hamgreen-700 rounded;
+    @apply bg-green-700 rounded;
   }
 
   /* Typography overrides for the terminal theme */
   .prose {
-    @apply text-hamgreen-400;
+    @apply text-green-400;
   }
 
   .prose h1,
   .prose h2,
   .prose h3,
   .prose h4 {
-    @apply text-hamgreen-500;
+    @apply text-green-500;
   }
 
   .prose a {
-    @apply text-hamgreen-400 underline decoration-hamgreen-700 hover:text-hamgreen-300;
+    @apply text-green-400 underline decoration-green-700 hover:text-green-300;
   }
 
   .prose code {
-    @apply bg-black text-hamgreen-500 border border-hamgreen-900 px-1;
+    @apply bg-black text-green-500 border border-green-900 px-1;
   }
 
   .prose pre {
-    @apply bg-black border border-hamgreen-900;
+    @apply bg-black border border-green-900;
   }
 
   .prose blockquote {
-    @apply border-l-4 border-hamgreen-700 text-hamgreen-300;
+    @apply border-l-4 border-green-700 text-green-300;
   }
 }

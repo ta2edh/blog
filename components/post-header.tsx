@@ -15,21 +15,21 @@ type PostHeaderProps = {
 
 export function PostHeader({ title, date, author, tags }: PostHeaderProps) {
   return (
-    <div className="mb-8 border-b border-hamgreen-800 pb-4">
+    <div className="mb-8 border-b border-green-800 pb-4">
       <div className="flex items-center gap-2 mb-2">
-        <FontAwesomeIcon icon={faSignal} className="h-6 w-6 text-hamgreen-500" />
+        <FontAwesomeIcon icon={faSignal} className="h-6 w-6 text-green-500" />
         <h1 className="text-3xl font-bold terminal-header">{title}</h1>
       </div>
 
       <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground mb-6 terminal-text">
         <div className="flex items-center">
-          <FontAwesomeIcon icon={faRadio} className="h-4 w-4 text-hamgreen-500 mr-2" />
+          <FontAwesomeIcon icon={faRadio} className="h-4 w-4 text-green-500 mr-2" />
           <time dateTime={date}>{formatDate(date)}</time>
         </div>
         {author && (
           <>
-            <span className="text-hamgreen-700">•</span>
-            <span className="text-hamgreen-400">
+            <span className="text-green-700">•</span>
+            <span className="text-green-400">
               {author.name}
               {author.callsign && ` (${author.callsign})`}
             </span>
@@ -40,7 +40,7 @@ export function PostHeader({ title, date, author, tags }: PostHeaderProps) {
       {tags && tags.length > 0 && (
         <div className="flex flex-wrap gap-2 mb-6">
           {tags.map((tag) => (
-            <Badge key={tag} variant="secondary" className="bg-black border border-hamgreen-700 text-hamgreen-500">
+            <Badge key={tag} variant="secondary" className="bg-black border border-green-700 text-green-500">
               {tag}
             </Badge>
           ))}
