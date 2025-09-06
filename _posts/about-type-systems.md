@@ -121,7 +121,7 @@ The first discussion around type systems often centers on their static or dynami
 The clearest difference appears in conditional (`if-else`) expressions. Recall that the earlier rule for `if-else` required the `then` and `else` branches to have the same type. This rule is common in static type systems because the compiler does not know which branch will be executed. An alternative is to use union types, as in TypeScript:
 
 ```typescript
-let a: string | number = Math.random() > 0.5 ? "alperen" : 3;
+let a: string | number = Math.random() > 0.5 ? "erdem" : 3;
 ```
 
 In this ternary expression, the two branches yield different types, so the resulting type is `string | number`. This can be expressed as:
@@ -144,12 +144,12 @@ In dynamic type systems, such rules are unnecessary since the relevant type info
     Γ, if False then e2 else e3 : T
 ```
 
-Below is an example of a Python program that would result in a type error if `a` is not "alperen". In a static type system, the type checker would flag the inconsistency at compile time because it would be impossible to assign a consistent type to `a` when `a` is not "alperen":
+Below is an example of a Python program that would result in a type error if `a` is not "erdem". In a static type system, the type checker would flag the inconsistency at compile time because it would be impossible to assign a consistent type to `a` when `a` is not "erdem":
 
 ```python
 a = input()
 
-if a == "alperen":
+if a == "erdem":
   return 3 + 5
 else:
   return "a" + 3
@@ -158,7 +158,7 @@ else:
 Dynamic type systems also allow type inspection. One advantage of static type systems is that type information is fixed at compile time and then discarded at run time, thereby avoiding run-time overhead. However, the availability of type information at run time in dynamic systems enables features like heterogeneous lists. Although heterogeneous lists can be constructed in static systems, operations on their elements are often limited. Consider this example in Python:
 
 ```python
-l = [1, True, "alperen"]
+l = [1, True, "erdem"]
 
 for elem in l:
   if type(elem) == int:
@@ -216,4 +216,5 @@ As stated at the beginning, type systems significantly affect our programming pr
 It has always saddened me that type systems operate so opaquely in our daily programming, often leaving us unaware of why type errors occur. This is one reason I originally wrote this post in Turkish—to contribute a new perspective to Turkish programming literature. Thank you very much for reading this far.
 
 Best regards,
+
 Erdem Hacisalihoglu
